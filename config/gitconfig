@@ -1,20 +1,17 @@
+[user]
+   name = Jeroen Mulder
+   email = jeroen.mulder.1989@gmail.com
+
 [color]
     ui = auto
 [alias]
-    co = checkout
-    st = status
-    br = branch
-    ci = commit
-    di = diff
-    sta = stash
-    upsvn = svn rebase
-    dci = svn dcommit
+#    co = checkout
+#    st = status
+#    br = branch
+#    ci = commit
+#    di = diff
+#    sta = stash
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
     cleanup = !git remote prune origin && git gc && git clean -dxf && git stash clear
 [push]
     default = simple
-[merge]
-    tool = mymeld
-    conflictstyle = diff3
-[mergetool "mymeld"]
-    cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --diff $LOCAL $MERGED $REMOTE
